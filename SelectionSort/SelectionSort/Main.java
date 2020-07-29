@@ -13,6 +13,16 @@ public class Main {
             System.out.print(e + " ");
         }
         System.out.println();
+
+        Student[] students = {new Student("Alice", 98),
+                new Student("Lee", 100),
+                new Student("Rey", 66)};
+        SelectionSort.sort(students);
+        for(Student student: students) {
+            System.out.print(student + " ");
+        }
+        System.out.println();
+
     }
 
     public static void dispay(int arr[]){
