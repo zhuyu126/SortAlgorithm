@@ -12,5 +12,5 @@
 
 图解选择排序:
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gh7yka6sdcg302s0ab755.gif)
+![image](https://tva1.sinaimg.cn/large/007S8ZIlgy1gh7yka6sdcg302s0ab755.gif)
 
