@@ -23,6 +23,8 @@ public class SelectionSort {
             swap(array, i,minIndex);
         }
     }
+
+
     private static <E> void swap(E[] array,int i,int j){
         E temp=array[i];
         array[i]=array[j];

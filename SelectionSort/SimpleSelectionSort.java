@@ -11,7 +11,7 @@ public class SimpleSelectionSort {
     }
 
     /**
-     * 选择排序
+     * 从前向后，每次找后面未排序部分的最小值和array[i]交换
      * @param array 待排序数组
      */
     public static void sort(int[] array){
@@ -28,9 +28,29 @@ public class SimpleSelectionSort {
             swap(array, i,minIndex);
         }
     }
+
+    /**
+     * 从后向前，每次找前面未排序部分的最大值和array[i]交换
+     * @param array 待排序数组
+     */
+    public static void sort2(int[] array){
+        if (array.length==0){
+            return;
+        }
+        for (int i=array.length-1;i>=0;i--){
+            int maxIndex=i;
+            for (int j=i;j>=0;j--){
+                if (array[j]>array[maxIndex]){
+                    maxIndex=j;
+                }
+            }
+            swap(array, i,maxIndex);
+        }
+    }
     private static void swap(int[] array,int i,int j){
         int temp=array[i];
         array[i]=array[j];
         array[j]=temp;
+
     }
 }
