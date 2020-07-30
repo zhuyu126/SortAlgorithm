@@ -16,6 +16,19 @@ public class InsertionSort {
             }
         }
     }
+    public static <E extends Comparable<E>> void sort2(E[] array){
+        if (array.length==0){
+            return;
+        }
+        for (int i=0;i<array.length;i++){
+            E temp=array[i];
+            int j;
+            for (j=i;j-1>=0&&temp.compareTo(array[j-1])<0;j--){
+                array[j-1]=array[j];
+            }
+            array[j]=temp;
+        }
+    }
     private static <E> void swap(E[] array,int i,int j){
         E temp=array[i];
         array[i]=array[j];
