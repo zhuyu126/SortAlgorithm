@@ -14,6 +14,13 @@ public class InsertionSortMain {
 //            System.out.print(e + " ");
 //        }
 //        System.out.println();
+
+        System.out.println("直接插入排序性能分析:");
+        int[] dataSize = {10000, 100000};
+        for(int n: dataSize){
+            Integer[] array = ArrayGenerator.generateRandomArray(n, n);
+            SortingHelper.sortTest("InsertionSort", array);
+        }
     }
 
     public static<E> void dispay(int arr[]){
