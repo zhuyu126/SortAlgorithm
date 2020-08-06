@@ -37,6 +37,9 @@ public class SortingHelper {
         if (sortName.equals("MergeSort")){
             MergeSort.sort(array);
         }
+        if (sortName.equals("MergeSortOptimization")){
+            MergeSortOptimization.sort(array);
+        }
         if (sortName.equals("MergeSortTrack")){
             MergeSortTrack.sort(array);
         }
