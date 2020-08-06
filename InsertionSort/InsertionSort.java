@@ -16,6 +16,24 @@ public class InsertionSort {
             }
         }
     }
+
+    /**
+     * 用于优化归并排序的insertSort接口
+     * @param array
+     * @param l
+     * @param r
+     * @param <E>
+     */
+    public static <E extends Comparable<E>> void sort(E[] array,int l,int r){
+        if (array.length==0){
+            return;
+        }
+        for (int i=l;i<=r;i++){
+            for (int j=i;j-1>=l&&array[j].compareTo(array[j-1])<0;j--){
+                swap(array,j-1,j);
+            }
+        }
+    }
     public static <E extends Comparable<E>> void sort2(E[] array){
         if (array.length==0){
             return;
