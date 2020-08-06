@@ -37,6 +37,9 @@ public class SortingHelper {
         if (sortName.equals("MergeSort")){
             MergeSort.sort(array);
         }
+        if (sortName.equals("MergeSortTrack")){
+            MergeSortTrack.sort(array);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
