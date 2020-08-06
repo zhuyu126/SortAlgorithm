@@ -34,11 +34,14 @@ public class SortingHelper {
         if (sortName.equals("InsertionSort2")){
             InsertionSort.sort2(array);
         }
+        if (sortName.equals("MergeSort")){
+            MergeSort.sort(array);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
             throw new RuntimeException(sortName+" failed");
         }
-        System.out.println(String.format("%s , 数据规模为 n = %d : 花费时间为 %f s", sortName, array.length, time));
+        System.out.println(String.format("%s , 数据规模为 n = %d , 花费时间为 %f s", sortName, array.length, time));
     }
 }
