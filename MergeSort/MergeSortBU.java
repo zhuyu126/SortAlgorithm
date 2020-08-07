@@ -16,10 +16,19 @@ public class MergeSortBU {
     public static <E extends Comparable<E>>void sort(E[] array){
         E[] temp = Arrays.copyOf(array, array.length );
         int n=array.length;
+
+        /**
+         * 使用插入排序优化
+         * 遍历一遍，对所有 arr[i, i + 15] 的区间，使用插入排序法
+         */
+        for(int i=0;i<n;i+=16){
+            InsertionSort.sort(array,i,Math.min(n-1,i+15));
+        }
+
         /**
          * 合并的区间长度
          */
-        for (int size=1;size<n;size+=size){
+        for (int size=16;size<n;size+=size){
             /**
              * 遍历合并两个区间的起始位置为i
              * 合并 [i, i + sz - 1] 和 [i + sz, Math.min(i + sz + sz - 1, n - 1)]
