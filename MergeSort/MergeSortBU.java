@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+/**
+ * 迭代实现归并排序
+ * @author robinson
+ */
 public class MergeSortBU {
     private MergeSortBU() {
     }
@@ -10,17 +14,19 @@ public class MergeSortBU {
      * @param <E>
      */
     public static <E extends Comparable<E>>void sort(E[] array){
-        E[] temp = Arrays.copyOf(array, array.length - 1);
-        int length=array.length;
-        for (int size=1;size<length;size+=size){
+        E[] temp = Arrays.copyOf(array, array.length );
+        int n=array.length;
+        /**
+         * 合并的区间长度
+         */
+        for (int size=1;size<n;size+=size){
             /**
              * 遍历合并两个区间的起始位置为i
              * 合并 [i, i + sz - 1] 和 [i + sz, Math.min(i + sz + sz - 1, n - 1)]
              */
-            for (int i=0;i+size<length;i+=size+size){
+            for (int i=0;i+size<n;i+=size+size){
                 if (array[i+size-1].compareTo(array[i+size])>0){
-                    merge(array,i,i+size-1,Math.min(i+size+size-1,length-1),temp);
-                }
+                    merge(array,i,i+size-1,Math.min(i+size+size-1,n-1),temp);                }
             }
         }
     }
