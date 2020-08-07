@@ -27,6 +27,7 @@ public class MergeSortBU {
 
         /**
          * 合并的区间长度
+         * 注意，size 从 16 开始
          */
         for (int size=16;size<n;size+=size){
             /**
