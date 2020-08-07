@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * 通用的归并排序实现
+ * 通用的归并排序递归实现
  * @author robinson
  */
 public class MergeSort {
@@ -27,6 +27,7 @@ public class MergeSort {
         sort(array,mid+1,r);
         merge(array,l,mid,r);
     }
+
 
     /**
      *  归并两个有序的区间 array[l, mid] 和 array[mid + 1, r]
@@ -61,4 +62,6 @@ public class MergeSort {
             }
         }
     }
+
+
 }
