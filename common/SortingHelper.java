@@ -52,6 +52,9 @@ public class SortingHelper {
         if (sortName.equals("MergeSortBU")){
             MergeSortBU.sort(array);
         }
+        if (sortName.equals("QuickSort")){
+            QuickSort.quickSort(array);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
