@@ -1,6 +1,7 @@
 import java.util.Random;
 
 /**
+ * 在对数据相等情况下进行排序时会产生性能退化
  * @author robinson
  */
 public class QuickSort {
