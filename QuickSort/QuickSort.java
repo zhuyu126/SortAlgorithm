@@ -60,9 +60,9 @@ public class QuickSort {
             return;
         }
 
-        int p = partition2(array, l, r,random);
-        sort(array, l, p - 1);
-        sort(array, p + 1, r);
+        int p = partition2(array, l, r, random);
+        sort2(array, l, p-1, random);
+        sort2(array, p + 1, r, random);
     }
 
     /**
@@ -74,7 +74,7 @@ public class QuickSort {
      * @return 基准pivot
      */
     private static<E extends Comparable<E>> int partition2(E[] array, int l, int r,Random random) {
-        //arr[l+1...j] < p ; arr[j+1...i] >= p
+
         /**
          * 生成 [l, r] 之间的随机基准值索引，进行交换，解决有序数组排序时的性能退化问题
          */
@@ -84,6 +84,7 @@ public class QuickSort {
         /**
          * 以L为一个基准索引
          */
+        //arr[l+1...j] < p ; arr[j+1...i] >= p
         int j=l;
         for(int i=l+1;i<=r;i++){
             if (array[i].compareTo(array[l])<0){
