@@ -16,6 +16,8 @@ public class MergeSortMain {
             SortingHelper.sortTest("SelectionSort", arrayTest);
             SortingHelper.sortTest("InsertionSort",arrayTest2);
             SortingHelper.sortTest("MergeSort",arrayTest3);
+            SortingHelper.sortTest("AnotherMergeSort",arrayTest3);
+
         }
         Integer [] arr={7, 1, 4, 2, 8, 3, 6, 5};
         SortingHelper.sortTest("MergeSortTrack",arr);

@@ -55,6 +55,9 @@ public class SortingHelper {
         if (sortName.equals("QuickSort")){
             QuickSort.quickSort2(array);
         }
+        if (sortName.equals("AnotherMergeSort")){
+            AnotherMergeSort.sort(array);
+        }
         if (sortName.equals("QuickSort2Way")){
             QuickSort2Way.quickSort2Way(array);
         }
