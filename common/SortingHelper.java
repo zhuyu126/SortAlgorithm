@@ -70,6 +70,9 @@ public class SortingHelper {
         if (sortName.equals("BubbleSort")){
             BubbleSort.bubbleSort(array);
         }
+        if (sortName.equals("AnotherBubbleSort")){
+            BubbleSort.anotherBubbleSort(array);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
