@@ -9,10 +9,12 @@ public class BubbleSortMain {
         SortingHelper.sortTest("BubbleSort",array);
         SortingHelper.sortTest("AnotherBubbleSort",array);
         SortingHelper.sortTest("BubbleSortOptimized",array2);
+        SortingHelper.sortTest("BubbleSortOptimized2",array2);
         System.out.println("OrderArray");
         array=ArrayGenerator.generateOrderArray(n);
         array2=Arrays.copyOf(array,array2.length);
         SortingHelper.sortTest("BubbleSort",array);
         SortingHelper.sortTest("BubbleSortOptimized",array2);
+        SortingHelper.sortTest("BubbleSortOptimized2",array2);
     }
 }

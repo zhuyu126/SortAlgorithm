@@ -28,7 +28,21 @@ public class BubbleSort {
                 break;
             }
         }
-
+    }
+    public static<E extends Comparable<E>>void bubbleSortOptimized2(E[] data) {
+        if (data == null || data.length == 0) {
+            return;
+        }
+        for (int i = 0; i < data.length - 1; ) {
+            int lastSwappedIndex = 0;
+            for (int j = 0; j < data.length - i - 1; j++) {
+                if (data[j].compareTo(data[j + 1]) > 0) {
+                    swap(data, j, j + 1);
+                    lastSwappedIndex = j + 1;
+                }
+            }
+            i = data.length - lastSwappedIndex;
+        }
     }
     public static <E extends  Comparable<E>>void anotherBubbleSort(E[] data){
         if (data==null||data.length==0){

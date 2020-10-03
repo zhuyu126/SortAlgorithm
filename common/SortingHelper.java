@@ -75,6 +75,8 @@ public class SortingHelper {
         }
         if (sortName.equals("BubbleSortOptimized")){
             BubbleSort.bubbleSortOptimized(array);
+        }if (sortName.equals("BubbleSortOptimized2")){
+            BubbleSort.bubbleSortOptimized2(array);
         }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
