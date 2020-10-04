@@ -56,6 +56,38 @@ public class BubbleSort {
             }
         }
     }
+    public static <E extends  Comparable<E>>void anotherBubbleSortOptimized(E[] data){
+        if (data==null||data.length==0){
+            return;
+        }
+        for (int i=0;i<data.length-1;i++){
+            boolean isSwapped=false;
+            for (int j=data.length-1;j>i;j--) {
+                if (data[j].compareTo(data[j - 1]) < 0) {
+                    swap(data, j - 1, j);
+                    isSwapped = true;
+                }
+            }
+            if (!isSwapped) {
+                break;
+            }
+        }
+    }
+    public static <E extends  Comparable<E>>void anotherBubbleSortOptimized2(E[] data){
+        if (data==null||data.length==0){
+            return;
+        }
+        for (int i=0;i<data.length-1;){
+            int lastSwappedIndex = data.length-1;
+            for (int j=data.length-1;j>i;j--){
+                if (data[j].compareTo(data[j - 1]) < 0) {
+                    swap(data, j - 1, j);
+                    lastSwappedIndex = j-1;
+                }
+            }
+            i=lastSwappedIndex+1;
+        }
+    }
     private static <E> void swap(E[] array,int i,int j){
         E temp=array[i];
         array[i]=array[j];
