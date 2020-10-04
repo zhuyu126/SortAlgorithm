@@ -7,7 +7,7 @@ public class ShellSortMain {
         Integer[] array2= Arrays.copyOf(array,array.length);
         Integer[] array3= Arrays.copyOf(array,array.length);
         SortingHelper.sortTest("ShellSort",array);
-//        SortingHelper.sortTest("MergeSort",array2);
+        SortingHelper.sortTest("MergeSort",array2);
         SortingHelper.sortTest("InsertionSort",array3);
     }
 }
