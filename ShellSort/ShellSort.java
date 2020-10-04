@@ -28,4 +28,26 @@ public class ShellSort {
             }
         }
     }
+
+    /**
+     * increment sequence 对希尔排序的增量序列进行改动
+     * @param data
+     * @param <E>
+     */
+    public static <E extends Comparable<E>>void shellSort3(E[] data){
+        int gap=1;
+        while(gap<data.length/3){
+            gap=gap*3+1; // <O(n^(3/2)) by Knuth,1973>: 1, 4, 13, 40, 121, ...
+        }
+        for (;gap>0;gap/=2){
+            for (int i=gap;i<data.length;i++){
+                E temp=data[i];
+                int j;
+                for (j=i;j>=gap&&temp.compareTo(data[j-gap])<0;j-=gap){
+                    data[j]=data[j-gap];
+                }
+                data[j]=temp;
+            }
+        }
+    }
 }
