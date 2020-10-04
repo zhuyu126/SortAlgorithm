@@ -46,7 +46,7 @@ public class AnotherShellSort {
                 }
                 data[j]=temp;
             }
-            gap/=2;
+            gap/=3;
         }
     }
 }
