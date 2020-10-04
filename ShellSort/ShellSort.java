@@ -15,5 +15,17 @@ public class ShellSort {
             }
         }
     }
-
+    public static <E extends Comparable<E>>void shellSort2(E[] data){
+        int gap=data.length/2;
+        for (;gap>0;gap/=2){
+            for (int i=gap;i<data.length;i++){
+                E temp=data[i];
+                int j;
+                for (j=i;j>=gap&&temp.compareTo(data[j-gap])<0;j-=gap){
+                    data[j]=data[j-gap];
+                }
+                data[j]=temp;
+            }
+        }
+    }
 }

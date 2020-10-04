@@ -79,10 +79,10 @@ public class SortingHelper {
             BubbleSort.bubbleSortOptimized2(array);
         }
         if (sortName.equals("ShellSort")){
-            ShellSort.shellSort(array);
+            ShellSort.shellSort2(array);
         }
         if (sortName.equals("AnotherShellSort")){
-            AnotherShellSort.anotherShellSort(array);
+            AnotherShellSort.anotherShellSort2(array);
         }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
