@@ -39,7 +39,7 @@ public class ShellSort {
         while(gap<data.length/3){
             gap=gap*3+1; // <O(n^(3/2)) by Knuth,1973>: 1, 4, 13, 40, 121, ...
         }
-        for (;gap>0;gap/=2){
+        for (;gap>0;gap/=3){
             for (int i=gap;i<data.length;i++){
                 E temp=data[i];
                 int j;
