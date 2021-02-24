@@ -90,6 +90,13 @@ public class SortingHelper {
         if (sortName.equals("AnotherShellSort")){
             AnotherShellSort.anotherShellSort3(array);
         }
+        if (sortName.endsWith("LSDSort")){
+            String[] strArr = (String[]) array;
+            if(strArr.length == 0) {
+                throw new IllegalArgumentException("arr can not be empty.");
+            }
+            LSDSort.sort(strArr, strArr[0].length());
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
