@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class BucketPerformance {
     public static void main(String[] args) {
         int n = 10000;
-//        int n = 1000000;
+//        int n = 10000000;
 
         Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
         Integer[] arr2 = Arrays.copyOf(arr, arr.length);
