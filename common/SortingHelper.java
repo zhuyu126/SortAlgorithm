@@ -101,6 +101,10 @@ public class SortingHelper {
             String[] strArr = (String[]) array;
             MSDSort.sort(strArr);
         }
+        if (sortName.endsWith("BucketSort")){
+            Integer[] strArr = (Integer[]) array;
+            BucketSort.sort(strArr,200);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
