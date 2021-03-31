@@ -97,6 +97,10 @@ public class SortingHelper {
             }
             LSDSort.sort(strArr, strArr[0].length());
         }
+        if (sortName.endsWith("MSDSort")){
+            String[] strArr = (String[]) array;
+            MSDSort.sort(strArr);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
