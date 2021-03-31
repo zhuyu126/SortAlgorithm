@@ -32,11 +32,9 @@ public class BucketSort {
         }
         //O(n)
         for (int i=left;i<=right;i++){
-//            int p=(array[i] - minv)/d;
-//            temp[index[p]+left]=array[i];
-//            index[p]++;
-            temp[index[(array[i] - minv) / d] + left] = array[i];
-            index[(array[i] - minv) / d] ++;
+            int p=(array[i] - minv)/d;
+            temp[index[p]+left]=array[i];
+            index[p]++;
         }
         //O(n)
         for (int i=left;i<=right;i++){
