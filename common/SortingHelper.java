@@ -105,6 +105,10 @@ public class SortingHelper {
             Integer[] strArr = (Integer[]) array;
             BucketSort.sort(strArr,200);
         }
+        if (sortName.endsWith("BucketSort2")){
+            Integer[] strArr = (Integer[]) array;
+            BucketSort2.sort(strArr,100);
+        }
         long endTime=System.nanoTime();
         double time = (endTime - startTime) / 1000000000.0;
         if (!SortingHelper.isSort(array)){
